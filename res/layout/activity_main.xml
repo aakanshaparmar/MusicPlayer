@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+  
+
+    <TextView
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="18dp"
+        android:text="URL:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/songUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/url"
+        android:layout_alignBottom="@+id/url"
+        android:layout_marginLeft="27dp"
+        android:layout_toRightOf="@+id/url"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/service"
+        android:layout_alignBottom="@+id/service"
+        android:layout_alignRight="@+id/songName"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/service"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/query"
+        android:layout_alignBottom="@+id/query"
+        android:layout_alignLeft="@+id/stop"
+        android:layout_alignRight="@+id/stop"
+        android:text="Delete" />
+
+    <EditText
+        android:id="@+id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/name"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignLeft="@+id/songUrl"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/url"
+        android:layout_below="@+id/songUrl"
+        android:layout_marginTop="16dp"
+        android:text="Title:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/play"
+        android:layout_alignBottom="@+id/play"
+        android:layout_centerHorizontal="true"
+        android:text="Service" />
+
+    <Button
+        android:id="@+id/query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/update"
+        android:layout_alignBottom="@+id/update"
+        android:layout_alignLeft="@+id/service"
+        android:layout_toLeftOf="@+id/stop"
+        android:text="Query" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/seekBar1"
+        android:layout_marginTop="32dp"
+        android:text="Update" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/update"
+        android:layout_below="@+id/update"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/seekBar1"
+        android:text="Play" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songName"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/update" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar1"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignTop="@+id/seekBar1"
+        android:layout_toLeftOf="@+id/songName"
+        android:text="Volume"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/play"
+        android:layout_below="@+id/play"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="36dp" >
+    </ListView>
+
+</RelativeLayout>
